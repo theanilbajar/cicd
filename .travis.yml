@@ -1,3 +1,8 @@
 lanuage: python
+python:
+  - "3.6"
+install:
+  - pip3 install -r requirements.txt
+  - pip3 uninstall pkg-resources
 script:
   - python -m pytest -v
