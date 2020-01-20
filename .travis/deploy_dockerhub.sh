@@ -6,5 +6,10 @@ else
     TAG="$TRAVIS_BRANCH"
 fi
 
-docker build -f Dockerfile -t $DOCKER_USER/$TRAVIS_REPO_SLUG:$TAG .
-docker push $DOCKER_USER/$TRAVIS_REPO_SLUG:$TAG
+# create image name
+IMAGE_NAME = $TRAVIS_REPO_SLUG:$TAG
+
+# build, tag and push to dockerhub
+docker build -f Dockerfile -t $IMAGE_NAME .
+docker tag $IMAGE_NAME $DOCKER_USER/$IMAGE_NAME
+docker push $DOCKER_USER/$IMAGE_NAME
