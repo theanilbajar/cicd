@@ -1,8 +1,12 @@
-lanuage: python
-python:
-  - "3.6"
-install:
-  - pip3 install -r requirements.txt
-  - pip3 uninstall pkg-resources
+sudo: required
+
+services:
+    - docker
+
+language: python
+
 script:
-  - python -m pytest -v
+    - python -m pytest -v
+
+after_success:
+  - sh .travis/deploy_dockerhub.sh
