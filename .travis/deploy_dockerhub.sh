@@ -8,8 +8,8 @@ else
 fi
 
 # create image name
-IMAGE_NAME="$TRAVIS_REPO_SLUG:$TAG"
-
+IMAGE_NAME="$PROJECT:$TAG"
+echo $IMAGE_NAME
 # build, tag and push to dockerhub
 docker build -f Dockerfile -t $IMAGE_NAME .
 docker tag $IMAGE_NAME $DOCKER_USER/$IMAGE_NAME
