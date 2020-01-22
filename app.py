@@ -4,9 +4,6 @@ from flask import Flask
 from buzz import generator
 from comic import xkcd_app
 
-HOST = "0.0.0.0"
-PORT = int(os.getenv('PORT', 5000))
-
 app = Flask(__name__)
 
 @app.route("/")
@@ -23,6 +20,5 @@ def xkcd_comic():
     page += '</body></html>'
     return page
 
-
 if __name__ == "__main__":
-    app.run(host=HOST, port=PORT)
+    app.run(host='0.0.0.0', port=int(os.getenv('PORT', 5000)))
