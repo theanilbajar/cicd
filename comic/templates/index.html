@@ -4,25 +4,21 @@
 <head>
     <meta charset="utf-8">
     <title>Random XKCD Comic</title>
-    <style>
-        #xkcd_block {
-            margin: 0;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 
 <body>
-    <div id="xkcd_block">
-        {% block body %}
-        <h1>{{data[0]}}</h1>
-        <img id="xkcdImage" alt="{{data[1]}}" src="{{data[2]}}">
-        {% endblock %}
+    {% block body %}
+    <div class="container h-100">
+    <div id="xkcd_block" class="card align-items-center">
+        <div class="card-body">
+            <h1 class="card-text">{{data[0]}}</h1>
+        </div>
+        <img class="card-img-top" id="xkcdImage" src="{{data[2]}}" alt="{{data[1]}}">
     </div>
-
+    {% endblock %}
+    </div>
 </body>
 
 </html>
