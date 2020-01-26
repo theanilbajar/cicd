@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Random XKCD Comic</title>
+    <style>
+        #xkcd_block {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="xkcd_block">
+        {% block body %}
+        <h1>{{data[0]}}</h1>
+        <img id="xkcdImage" alt="{{data[1]}}" src="{{data[2]}}">
+        {% endblock %}
+    </div>
+
+</body>
+
+</html>

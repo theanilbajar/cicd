@@ -1,4 +1,10 @@
 import xkcd
 
 def getRandomXkcdImage():
-    return xkcd.getRandomComic().imageLink
+    try:
+        randomComic = xkcd.getRandomComic()
+        print(randomComic)
+        return [randomComic.getTitle(), randomComic.getAltText(), randomComic.getImageLink()]
+    except Exception as e:
+        return None
+    
