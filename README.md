@@ -1,2 +1,2 @@
 # cicd
-A sample python app implemented via Travis CI, Docker, and Heroku
+A sample python app implemented via Travis CI, Docker, Kubernetes, and Heroku
