@@ -6,10 +6,10 @@ from comic import xkcd_app
 app = Flask(__name__, template_folder='./comic/templates')
 
 @app.route("/")
-def home_page():
-    return '<html><body><a href="/xkcd">Random XKCD Comic</a></body></html>'
+# def home_page():
+#     return '<html><body><a href="/xkcd">Random XKCD Comic</a></body></html>'
 
-@app.route("/xkcd/")
+# @app.route("")
 def xkcd_comic():
     xkcd_data = xkcd_app.getRandomXkcdImage()
     if xkcd_data is None:
