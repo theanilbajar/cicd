@@ -19,6 +19,6 @@ six==1.14.0
 urllib3==1.26.5
 wcwidth==0.1.8
 websocket-client==0.57.0
-Werkzeug==0.16.0
+Werkzeug==2.2.3
 xkcd==2.4.2
 zipp==1.0.0
